@@ -1,0 +1,229 @@
+@import "./reset"
+@import "./config"
+
+@mixin centerContainer($height)
+  width: $container-width
+  height: $height
+  margin: 0 auto
+
+@mixin regularFlex($direction, $align: center)
+  display: flex
+  align-items: $align
+  justify-content: center
+  flex-direction: $direction
+
+@mixin lineSet($height, $width, $top, $left, $right)
+  height: $height
+  width: $width
+  top: $top
+  left: $left
+  right: $right 
+
+@mixin techBallSet($top, $left, $right, $translate)
+  top: $top
+  left: $left
+  right: $right
+  translate: $translate
+
+.head-section
+  @include centerContainer(100vh)
+  padding: 4rem 0
+
+  .container
+    height: 100%
+    width: 100%
+    display: block
+    overflow: hidden
+    position: relative
+
+    .box
+      width: 70rem
+      height: 70rem
+      background: $dominant-color-first
+      border-left: $border
+      position: absolute
+      bottom: 0
+      right: 0
+      translate: 50% 50%
+      rotate: 45deg
+      z-index: 1
+    
+    .outline
+      width: 100%
+      height: 100%
+      border: $border
+      @include regularFlex(row)
+
+      .text-container
+        width: calc($container-width / 2)
+        height: 20rem
+        @include regularFlex(column)
+
+        .main-text
+          @include mainFont(7rem, bold)
+          line-height: 1
+          letter-spacing: 0.5rem
+          color: transparent
+          -webkit-text-stroke: 0.2rem $secondary-color
+
+        .name-text
+          font-size: 6rem
+          font-family: $written-font
+          line-height: 0.9
+        
+        .name
+          translate: -20% -65%
+
+        .surname
+          translate: 20% -75%
+
+      .my-picture
+        filter: grayscale(100%)
+        -webkit-filter: grayscale(100%)
+
+.section-about-me
+  @include centerContainer(auto)
+  @include regularFlex(row, auto)
+  gap: 2.5rem
+  margin-top: 3rem
+
+  .my-journey
+    width: calc($container-width / 2)
+    height: 50rem
+    border: $border
+    position: relative
+
+    .head-text-my-journey
+      @include mainFont(4rem, medium)
+      text-align: center
+      line-height: 0.9
+      position: absolute
+      left: 50%
+      translate: -50% -55%
+      background: $dominant-color-first
+      width: 25rem
+
+    .box-for-skills
+      background: $secondary-color
+      width: 7rem
+      height: 7rem
+      border-radius: 50%
+      position: absolute
+      z-index: 1
+      display: flex
+      align-items: center
+      justify-content: center
+      background: $accent-color
+
+    .line
+      background: $secondary-color
+      position: absolute
+      background: $accent-color
+
+    .first-line
+      @include lineSet(0.7rem, 11rem, 14%, 21.5%, null)
+    
+    .second-line
+      @include lineSet(0.7rem, 11rem, 14%, null, 21.5%)
+
+    .third-line
+      @include lineSet(8rem, 0.7rem, 15%, 21.5%, null)
+      z-index: -1
+    
+    .fourth-line
+      @include lineSet(8rem, 0.7rem, 15%, null, 21.5%)
+      z-index: -1
+
+    .fifth-line
+      @include lineSet(0.7rem, 7.5rem, 37%, 28%, null)
+
+    .sixth-line
+      @include lineSet(0.7rem, 7.5rem, 37%, null, 28%)
+
+    .seventh-line
+      @include lineSet(5rem, 0.7rem, 45%, 50%, null)
+      translate: -50%
+
+    .eighth-line
+      @include lineSet(0.7rem, 8rem, 60%, 55%, null)
+
+    .ninth-line
+      @include lineSet(8rem, 0.7rem, 66%, null, 21.5%)
+
+    .tenth-line
+      @include lineSet(0.7rem, 8rem, 87%, 55%, null)
+
+    .eleventh-line
+      @include lineSet(0.7rem, 7.5rem, 87%, 28%, null)
+
+    .internet
+      @include techBallSet(8%, 50%, null, -50%)
+
+    .html
+      @include techBallSet(31%, 15%, null, null)
+
+    .css
+      @include techBallSet(31%, null, 15%, null)
+
+    .javascript
+      @include techBallSet(31%, 50%, null, -50%)
+
+    .bootstrap
+      @include techBallSet(54%, 50%, null, -50%)
+
+    .git
+      @include techBallSet(54%, null, 15%, null)
+
+    .react
+      @include techBallSet(81%, null, 15%, null)
+
+    .react-router
+      @include techBallSet(81%, 50%, null, -50%)
+
+    .sass
+      @include techBallSet(81%, 15%, null, null)
+
+  .about-me
+    width: calc($container-width / 2)
+    position: relative
+    border-top: $border
+
+    .head-text-about-me
+      @include mainFont(4rem, medium)
+      position: absolute
+      translate: 0 -55%
+      background: $dominant-color-first
+      width: 20.5rem
+
+    .text-about-me
+      @include mainFont(2rem, regular)
+      margin-top: 3rem
+      text-align: justify
+      line-height: 1.5
+
+      .bold-underline 
+        @include mainFont(2rem, medium)
+        text-decoration: underline
+        text-decoration-color: $accent-color
+
+      .link
+        @include mainFont(2rem, medium)
+        color: $accent-color
+        text-decoration: underline
+        text-decoration-color: $accent-color
+
+.projects
+  @include centerContainer(auto)
+  margin-top: 8rem
+  border-top: $border
+  position: relative
+  padding-top: 5rem 
+
+  .head-text-projects
+    @include mainFont(4rem, medium)
+    position: absolute
+    left: 50%
+    translate: -50% -155%
+    background: $dominant-color-first
+    padding: 0 1rem
+

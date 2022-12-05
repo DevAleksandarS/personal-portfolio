@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 10px;
+}
+
+.head-section {
+  width: 100rem;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+.head-section .container {
+  height: 100%;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.head-section .container .box {
+  width: 70rem;
+  height: 70rem;
+  background: #fff;
+  border-left: 0.25rem solid #00b4d8;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  translate: 50% 50%;
+  rotate: 45deg;
+  z-index: 1;
+}
+.head-section .container .outline {
+  width: 100%;
+  height: 100%;
+  border: 0.25rem solid #00b4d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.head-section .container .outline .text-container {
+  width: 50rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.head-section .container .outline .text-container .main-text {
+  font-family: "Merriweather", serif;
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.5rem;
+  color: transparent;
+  -webkit-text-stroke: 0.2rem #d4d4d4;
+}
+.head-section .container .outline .text-container .name-text {
+  font-size: 6rem;
+  font-family: "Dancing Script", cursive;
+  line-height: 0.9;
+}
+.head-section .container .outline .text-container .name {
+  translate: -20% -65%;
+}
+.head-section .container .outline .text-container .surname {
+  translate: 20% -75%;
+}
+.head-section .container .outline .my-picture {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.section-about-me {
+  width: 100rem;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: auto;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+.section-about-me .my-journey {
+  width: 50rem;
+  height: 50rem;
+  border: 0.25rem solid #00b4d8;
+  position: relative;
+}
+.section-about-me .my-journey .head-text-my-journey {
+  font-family: "Merriweather", serif;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 0.9;
+  position: absolute;
+  left: 50%;
+  translate: -50% -55%;
+  background: #fff;
+  width: 25rem;
+}
+.section-about-me .my-journey .box-for-skills {
+  background: #d4d4d4;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00b4d8;
+}
+.section-about-me .my-journey .line {
+  background: #d4d4d4;
+  position: absolute;
+  background: #00b4d8;
+}
+.section-about-me .my-journey .first-line {
+  height: 0.7rem;
+  width: 11rem;
+  top: 14%;
+  left: 21.5%;
+}
+.section-about-me .my-journey .second-line {
+  height: 0.7rem;
+  width: 11rem;
+  top: 14%;
+  right: 21.5%;
+}
+.section-about-me .my-journey .third-line {
+  height: 8rem;
+  width: 0.7rem;
+  top: 15%;
+  left: 21.5%;
+  z-index: -1;
+}
+.section-about-me .my-journey .fourth-line {
+  height: 8rem;
+  width: 0.7rem;
+  top: 15%;
+  right: 21.5%;
+  z-index: -1;
+}
+.section-about-me .my-journey .fifth-line {
+  height: 0.7rem;
+  width: 7.5rem;
+  top: 37%;
+  left: 28%;
+}
+.section-about-me .my-journey .sixth-line {
+  height: 0.7rem;
+  width: 7.5rem;
+  top: 37%;
+  right: 28%;
+}
+.section-about-me .my-journey .seventh-line {
+  height: 5rem;
+  width: 0.7rem;
+  top: 45%;
+  left: 50%;
+  translate: -50%;
+}
+.section-about-me .my-journey .eighth-line {
+  height: 0.7rem;
+  width: 8rem;
+  top: 60%;
+  left: 55%;
+}
+.section-about-me .my-journey .ninth-line {
+  height: 8rem;
+  width: 0.7rem;
+  top: 66%;
+  right: 21.5%;
+}
+.section-about-me .my-journey .tenth-line {
+  height: 0.7rem;
+  width: 8rem;
+  top: 87%;
+  left: 55%;
+}
+.section-about-me .my-journey .eleventh-line {
+  height: 0.7rem;
+  width: 7.5rem;
+  top: 87%;
+  left: 28%;
+}
+.section-about-me .my-journey .internet {
+  top: 8%;
+  left: 50%;
+  translate: -50%;
+}
+.section-about-me .my-journey .html {
+  top: 31%;
+  left: 15%;
+}
+.section-about-me .my-journey .css {
+  top: 31%;
+  right: 15%;
+}
+.section-about-me .my-journey .javascript {
+  top: 31%;
+  left: 50%;
+  translate: -50%;
+}
+.section-about-me .my-journey .bootstrap {
+  top: 54%;
+  left: 50%;
+  translate: -50%;
+}
+.section-about-me .my-journey .git {
+  top: 54%;
+  right: 15%;
+}
+.section-about-me .my-journey .react {
+  top: 81%;
+  right: 15%;
+}
+.section-about-me .my-journey .react-router {
+  top: 81%;
+  left: 50%;
+  translate: -50%;
+}
+.section-about-me .my-journey .sass {
+  top: 81%;
+  left: 15%;
+}
+.section-about-me .about-me {
+  width: 50rem;
+  position: relative;
+  border-top: 0.25rem solid #00b4d8;
+}
+.section-about-me .about-me .head-text-about-me {
+  font-family: "Merriweather", serif;
+  font-size: 4rem;
+  font-weight: 700;
+  position: absolute;
+  translate: 0 -55%;
+  background: #fff;
+  width: 20.5rem;
+}
+.section-about-me .about-me .text-about-me {
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 3rem;
+  text-align: justify;
+  line-height: 1.5;
+}
+.section-about-me .about-me .text-about-me .bold-underline {
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #00b4d8;
+          text-decoration-color: #00b4d8;
+}
+.section-about-me .about-me .text-about-me .link {
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00b4d8;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #00b4d8;
+          text-decoration-color: #00b4d8;
+}
+
+.projects {
+  width: 100rem;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 8rem;
+  border-top: 0.25rem solid #00b4d8;
+  position: relative;
+  padding-top: 5rem;
+}
+.projects .head-text-projects {
+  font-family: "Merriweather", serif;
+  font-size: 4rem;
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  translate: -50% -155%;
+  background: #fff;
+  padding: 0 1rem;
+}/*# sourceMappingURL=portfolio.css.map */

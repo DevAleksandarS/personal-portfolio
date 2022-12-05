@@ -1,0 +1,22 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap')
+$written-font: 'Dancing Script', cursive
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap')
+$font: 'Merriweather', serif
+$font-weights: ("regular": 400, "medium": 700, "bold": 900)
+
+@mixin mainFont($size, $weight)
+  font-family: $font
+  font-size: $size
+  font-weight: map-get($font-weights, $weight)
+
+// COLORS
+$dominant-color-first: #fff
+$dominant-color-second: #000
+$secondary-color: #d4d4d4
+$accent-color: #00b4d8
+
+$container-width: 100rem
+
+// BORDERS
+$border: 0.25rem solid $accent-color
