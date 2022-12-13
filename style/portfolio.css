@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -108,7 +108,6 @@ html {
   width: 25rem;
 }
 .section-about-me .my-journey .box-for-skills {
-  background: #d4d4d4;
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
@@ -117,18 +116,17 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #00b4d8;
 }
 .section-about-me .my-journey .line {
   background: #d4d4d4;
   position: absolute;
-  background: #00b4d8;
 }
 .section-about-me .my-journey .first-line {
   height: 0.7rem;
   width: 11rem;
   top: 14%;
   left: 21.5%;
+  rotate: 180deg;
 }
 .section-about-me .my-journey .second-line {
   height: 0.7rem;
@@ -161,6 +159,7 @@ html {
   width: 7.5rem;
   top: 37%;
   right: 28%;
+  rotate: 180deg;
 }
 .section-about-me .my-journey .seventh-line {
   height: 5rem;
@@ -186,12 +185,14 @@ html {
   width: 8rem;
   top: 87%;
   left: 55%;
+  rotate: 180deg;
 }
 .section-about-me .my-journey .eleventh-line {
   height: 0.7rem;
   width: 7.5rem;
   top: 87%;
   left: 28%;
+  rotate: 180deg;
 }
 .section-about-me .my-journey .internet {
   top: 8%;
@@ -268,6 +269,9 @@ html {
   font-size: 2rem;
   font-weight: 700;
   color: #00b4d8;
+  text-decoration: none;
+}
+.section-about-me .about-me .text-about-me .link:hover {
   text-decoration: underline;
   -webkit-text-decoration-color: #00b4d8;
           text-decoration-color: #00b4d8;
@@ -291,4 +295,283 @@ html {
   translate: -50% -155%;
   background: #fff;
   padding: 0 1rem;
+}
+
+.grid-projects {
+  width: 100rem;
+  height: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.grid-projects .project {
+  cursor: pointer;
+  height: 20rem;
+  overflow: hidden;
+  position: relative;
+}
+.grid-projects .project .overlay {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(transparent, #00b4d8 75%);
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+  z-index: 2;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.grid-projects .project .overlay .name {
+  margin-top: auto;
+  font-family: "Merriweather", serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.grid-projects .project .overlay .desc {
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.grid-projects .project .project-logo {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transition: transform 200ms ease-out;
+  transform: translate(-50%, 0);
+}
+.grid-projects .project .project-ss {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transition: transform 200ms ease-out;
+  transform: translate(-50%, 100%);
+}
+
+.water-fill-animation-block {
+  background: #d4d4d4;
+}
+
+.water-fill-animation {
+  background: #d4d4d4 url("./waves.png");
+  background-repeat: repeat-x;
+  -webkit-animation: water-fill 7s linear;
+          animation: water-fill 7s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes water-fill {
+  0% {
+    background-position: 0 100px;
+  }
+  100% {
+    background-position: 900px -30px;
+  }
+}
+
+@keyframes water-fill {
+  0% {
+    background-position: 0 100px;
+  }
+  100% {
+    background-position: 900px -30px;
+  }
+}
+.line-fill-animation-first-second {
+  background: #00b4d8;
+  height: 100%;
+  -webkit-animation: fill-first-second 3s linear forwards;
+          animation: fill-first-second 3s linear forwards;
+}
+
+@-webkit-keyframes fill-first-second {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fill-first-second {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.line-fill-animation-third-fourth {
+  background: #00b4d8;
+  width: 100%;
+  -webkit-animation: fill-third-fourth 3s linear forwards;
+          animation: fill-third-fourth 3s linear forwards;
+}
+
+@-webkit-keyframes fill-third-fourth {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes fill-third-fourth {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.line-fill-animation-fifth-sixth {
+  background: #00b4d8;
+  height: 100%;
+  -webkit-animation: fill-fifth-sixth 3s linear forwards;
+          animation: fill-fifth-sixth 3s linear forwards;
+}
+
+@-webkit-keyframes fill-fifth-sixth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fill-fifth-sixth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.line-fill-animation-seventh {
+  background: #00b4d8;
+  width: 100%;
+  -webkit-animation: fill-seventh 3s linear forwards;
+          animation: fill-seventh 3s linear forwards;
+}
+
+@-webkit-keyframes fill-seventh {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes fill-seventh {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.line-fill-animation-eighth {
+  background: #00b4d8;
+  height: 100%;
+  -webkit-animation: fill-eight 3s linear forwards;
+          animation: fill-eight 3s linear forwards;
+}
+
+@-webkit-keyframes fill-eight {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fill-eight {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.line-fill-animation-ninth {
+  background: #00b4d8;
+  width: 100%;
+  -webkit-animation: fill-ninth 3s linear forwards;
+          animation: fill-ninth 3s linear forwards;
+}
+
+@-webkit-keyframes fill-ninth {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes fill-ninth {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.line-fill-animation-tenth {
+  background: #00b4d8;
+  height: 100%;
+  -webkit-animation: fill-tenth 3s linear forwards;
+          animation: fill-tenth 3s linear forwards;
+}
+
+@-webkit-keyframes fill-tenth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fill-tenth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.line-fill-animation-eleventh {
+  background: #00b4d8;
+  height: 100%;
+  -webkit-animation: fill-eleventh 3s linear forwards;
+          animation: fill-eleventh 3s linear forwards;
+}
+
+@-webkit-keyframes fill-eleventh {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fill-eleventh {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }/*# sourceMappingURL=portfolio.css.map */
